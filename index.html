@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/f475d11dda.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+
+ <!-- Top Navigation Menu -->
+    <nav class="topnav">
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+        <a href="https://www.linkedin.com/in/jason-young-54169519b/">LinkedIn</a>
+        <a href="https://github.com/Gruffy20">Github</a>
+        <a href="./resources/CV.pdf">CV</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa-solid fa-bars"></i>
+        </a>
+        <label id="mode-btn" class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+    </nav>
+    
+
+<!-- BIO -->
+
+    <span id="bio">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div id="blurb">
+                        <h1>Jason Young</h1>
+                        <p>Hi, I’m Jason! I’m a web developer with in-depth experience in UI/UX design. In a nutshell, I create websites that help organizations address business challenges and meet their needs. I manage everything from website navigation and layout to a company’s web hosting and security architecture. My expertise lies within front-end web apps, and the main languages in my tech stack are JavaScript, React, and of course HTML/CSS. I’m a lifelong learner (currently taking a course on building AI chatbots with Python!) and love to read, run, and find new bubble tea shops in New York City.
+                                
+                        </p>
+                        <button id="contact-btn">Contact</button>
+                    </div>
+                </div>
+            <div class="flip-card-back">
+                <form class="form-contact" action="action_page.php">
+        
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                
+                </form>
+            </div>
+            <!-- </div> -->
+            </div>
+        </div>
+        <img id="profile" src="./resources/ED3F1D97-9826-49DB-9E0F-9EEE433B9AD0.jpeg" alt="Jason Young web developer Guildford">
+        
+    </span>
+        
+
+
+
+    <div id="skills">
+        <ul>
+            <a href="https://en.wikipedia.org/wiki/JavaScript"><li class="skills">JavaScript <i class="fa-brands fa-square-js fa-2x"></i></li></a>
+            <a href="https://en.wikipedia.org/wiki/Node.js"><li class="skills">Node <i class="fa-brands fa-node fa-2x"></i></li></a>
+            <a href="https://en.wikipedia.org/wiki/HTML"><li class="skills">HTML <i class="fa-brands fa-html5 fa-2x"></i></li></a>
+            <a href="https://en.wikipedia.org/wiki/CSS"><li class="skills">CSS <i class="fa-brands fa-css3-alt fa-2x"></i></li></a>
+            <a href="https://en.wikipedia.org/wiki/GitHub"><li class="skills">Github <i class="fa-brands fa-square-github fa-2x"></i></li></a>
+            
+        </ul>
+    </div>
+
+    <h1 class="projects-heading">Projects</h1>
+
+    <div id="projects">
+        <div class="card-project">
+            <a href=""><div class="flip-project">
+                <div class="flip-project-inner">
+                  <div class="flip-project-front">
+                    <img src="./resources/code-img.png" alt="Code image" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-project-back">
+                    <h2>Credit Card Checker</h2> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+        </div>
+        <div class="card-project">
+            <a href=""><div class="flip-project">
+                <div class="flip-project-inner">
+                  <div class="flip-project-front">
+                    <img src="./resources/tea-cozy-img.jpeg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-project-back">
+                    <h2>Tea Cozy Solution</h2> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+        </div>
+        <div class="card-project">
+            <a href=""><div class="flip-project">
+                <div class="flip-project-inner">
+                  <div class="flip-project-front">
+                    <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-project-back">
+                    <h1>John Doe</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+        </div>
+        <div class="card-project">
+            <a href=""><div class="flip-project">
+                <div class="flip-project-inner">
+                  <div class="flip-project-front">
+                    <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-project-back">
+                    <h1>John Doe</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+        </div>
+    </div>
+
+    <form id="contact">
+
+    </form>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
