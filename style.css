@@ -176,22 +176,19 @@ input:checked + label + .background {
 
 .name-heading {
     font-weight: 600;
-    color: #404040;
+    color: #1F6D7A;
 }
 
 .bio-blurb {
     line-height: 1.5rem;
+    color: #404040;
 }
 
 .contact-btn {
     padding-bottom: 1rem;
 }
 
-@media only screen and (max-width: 700px) {
-    #profile {
-        display: none;
-    }
-}
+
 
 #blurb-frame {
     display: flex;
@@ -473,6 +470,31 @@ input[type=text], select, textarea {
   }
   .email-heading {
     text-align: center;
-    padding: 5rem 0;
+    padding-top: 5rem;
     color: #8AEAFB;
   }
+
+  .footer-links {
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+
+  footer i {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #8AEAFB;
+  }
+
+  @media only screen and (max-width: 700px) {
+    #profile {
+        display: none;
+    }
+
+    #skills ul {
+        flex-direction: column;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+}
