@@ -1,7 +1,8 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #1F6D7A;
     background-color: white;
+    width: 100%;
 }
 
 a {
@@ -28,33 +29,18 @@ a {
 .topnav a:hover {
   color: #3FDDFA;
 }
-/* The switch - the box around the slider */
-.switch {
+
+/*label {
     position: relative;
     display: inline-block;
     width: 2rem;
     height: 1rem;
-  }
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  /* The slider */
-  .slider {
-    position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-color: #1F6D7A;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
+    border-radius: 30%;
+}
+
+label::after {
     position: absolute;
     content: "";
     height: 0.8rem;
@@ -65,33 +51,101 @@ a {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #1F6D7A;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px gray;
-  }
-  
-  input:checked + .slider:before {
+    border-radius: 50%;
+}
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked + label {
+    background: #1F6D7A;
+}
+
+input:checked + label::after {
     -webkit-transform: translateX(0.8rem);
     -ms-transform: translateX(0.8rem);
     transform: translateX(0.8rem);
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+
+input:checked + label + .background {
+    background: #1F6D7A;
+}
+ The switch - the box around the slider */
+/* .switch {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
   }
+  /* Hide default HTML checkbox */
+  /* .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  } */
+  /* The slider */
+  /* .darkToggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1F6D7A;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }  */
+  
+  /* .darkToggle:before {
+    position: absolute;
+    content: "";
+    height: 0.8rem;
+    width: 0.8rem;
+    left: 3px;
+    bottom: 2px;
+    top: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  } */
+  
+  /* input:checked + .darkToggle {
+    background-color: #1F6D7A;
+  }
+  
+  input:focus + .darkToggle {
+    box-shadow: 0 0 1px gray;
+  }
+  
+  input:checked + .darkToggle:before {
+    -webkit-transform: translateX(0.8rem);
+    -ms-transform: translateX(0.8rem);
+    transform: translateX(0.8rem);
+  } */
   /* Rounded sliders */
-  .slider.round {
+  /* .darkToggle.round {
     border-radius: 34px;
   }
   
-  .slider.round:before {
+  .darkToggle.round:before {
     border-radius: 50%;
-  }
+  } */
 
   /*  DARK MODE */
 
-  .dark-mode {
+  /* .dark {
     background-color: #43727A;
     color: #8AEAFB;
   }
@@ -99,7 +153,7 @@ a {
   #dark-mode {
     background-color: #43727A;
     color: #8AEAFB;
-  }
+  } */
 
 
   /* BIO */
@@ -111,6 +165,26 @@ a {
     justify-content: center;
     align-items:center;
     margin-top: 6rem;
+    padding-bottom: 5rem;
+    
+}
+
+.hello-heading {
+    font-weight: 400;
+    color: #404040;
+}
+
+.name-heading {
+    font-weight: 600;
+    color: #404040;
+}
+
+.bio-blurb {
+    line-height: 1.5rem;
+}
+
+.contact-btn {
+    padding-bottom: 1rem;
 }
 
 @media only screen and (max-width: 700px) {
@@ -195,11 +269,7 @@ input[type=text], select, textarea {
     opacity: 0.9;
 }
 
-/* #profile:hover {
-    -moz-transform:rotate(90deg);
-    -webkit-transform:rotate(90deg);
-    transform:rotate(360deg);
-} */
+
 
 
 
@@ -256,22 +326,39 @@ input[type=text], select, textarea {
 
 /* SKILLS */
 
+#skills {
+    background-color: #404040;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.skills-heading {
+    
+    font-weight: 500;
+    text-align: center;
+    padding-top: 5rem;
+    color: #8AEAFB;
+    width: 100%;
+}
 .skills {
     font-weight: 700;
 }
 
-#skills {
+/* #skills {
     display: flex;
-    margin-top: 5rem;
-    
-}
+    margin-top: 5rem; 
+     
+}*/
 
 #skills ul {
-    display: inline-flex;
-    width: 100%;
+    display: flex;
+    width: 80%;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+    
 }
 
 #skills a {
@@ -289,7 +376,7 @@ input[type=text], select, textarea {
     border-radius: 50%;
     justify-items: center;
     align-items: center;
-    color: #1F6D7A;
+    color: #ccc;
 }
 
 #skills a:hover {
@@ -376,6 +463,16 @@ input[type=text], select, textarea {
   }
 
   .card-project {
-    width: 200px;
+    width: 300px;
     height: 300px;
+  }
+
+
+  footer {
+    background-color: #404040;
+  }
+  .email-heading {
+    text-align: center;
+    padding: 5rem 0;
+    color: #8AEAFB;
   }
